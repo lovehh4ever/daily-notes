@@ -24,3 +24,15 @@ sudo vi /etc/environment
 source /etc/environment
 echo $JAVA_HOME
 ```
+
+
+### MPEG-DASH Content Generation with MP4Box and x264
+
+
+
+```
+sudo apt install x264
+sudo apt install gpac
+```
+
+https://bitmovin.com/mp4box-dash-content-generation-x264/
