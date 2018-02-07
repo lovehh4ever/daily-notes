@@ -36,3 +36,5 @@ sudo apt install gpac
 ```
 
 https://bitmovin.com/mp4box-dash-content-generation-x264/
+
+http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
