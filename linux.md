@@ -87,3 +87,8 @@ systemctl enable tomcat
 
 
 
+http://users.ece.cmu.edu/~vsekar/mpcdash.html
+
+
+https://tdngan.wordpress.com/2016/11/17/how-to-encode-multi-bitrate-videos-in-mpeg-dash-for-mse-based-media-players/
+
