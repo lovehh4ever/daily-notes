@@ -92,3 +92,23 @@ http://users.ece.cmu.edu/~vsekar/mpcdash.html
 
 https://tdngan.wordpress.com/2016/11/17/how-to-encode-multi-bitrate-videos-in-mpeg-dash-for-mse-based-media-players/
 
+
+http://dashif.org/reference/players/javascript/nightly/dash.js/samples/getting-started-basic-embed/listening-to-events.html
+
+        function setListener(eventName)
+        {
+            player.on(dashjs.MediaPlayer.events[eventName],showEvent);
+            var element = document.createElement("input");
+            element.type = "button";
+            element.id = eventName;
+            element.value = "Remove " + eventName;
+            element.onclick = function() {
+                player.off(dashjs.MediaPlayer.events[eventName],showEvent);
+                document.getElementById("eventHolder").removeChild(element);
+            };
+            document.getElementById("eventHolder").appendChild(element);
+        }
+
+
+http://cdn.dashjs.org/latest/jsdoc/MediaPlayerEvents.html
+http://cdn.dashjs.org/latest/jsdoc/module-MediaPlayer.html
