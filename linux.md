@@ -112,3 +112,18 @@ http://dashif.org/reference/players/javascript/nightly/dash.js/samples/getting-s
 
 http://cdn.dashjs.org/latest/jsdoc/MediaPlayerEvents.html
 http://cdn.dashjs.org/latest/jsdoc/module-MediaPlayer.html
+
+
+MANIFEST_LOADED
+
+Average Video Quality
+        getBitrateInfoListFor(type)
+        
+Average Quality Variations
+        PLAYBACK_RATE_CHANGED
+
+Rebuffer
+        BUFFER_EMPTY
+
+Startup Delay
+        CAN_PLAY
