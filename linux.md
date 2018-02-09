@@ -127,3 +127,6 @@ Rebuffer
 
 Startup Delay
         CAN_PLAY
+
+
+https://www.radiantmediaplayer.com/guides/working-with-mp4box.html
