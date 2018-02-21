@@ -133,3 +133,5 @@ https://www.radiantmediaplayer.com/guides/working-with-mp4box.html
 
 
 https://lists.ffmpeg.org/pipermail/ffmpeg-user/2017-May/036192.html
+
+https://sourceforge.net/p/gpac/discussion/287547/thread/5bd36a87/
