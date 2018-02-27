@@ -1,3 +1,13 @@
 https://stackoverflow.com/questions/18053059/getresourceasstream-is-returning-null-properties-file-is-not-loading
 
 https://msdn.microsoft.com/en-us/library/aa383500(v=vs.85).aspx
+
+https://www.cacheonix.org/articles/How_to_Cache_a_File_in_Java.htm
+
+https://commons.apache.org/proper/commons-jcs/ElementEventHandling.html
+
+ Alternatively, you can extend the org.apache.commons.jcs.engine.memory.AbstractMemoryCache class. Several different memory caches are available: two LRU implementations, an LFU, and an adaptive replacement algorithm.
+ 
+ https://commons.apache.org/proper/commons-jcs/RegionProperties.html
+ 
+ 
