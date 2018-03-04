@@ -36,3 +36,8 @@ https://www.mankier.com/package/gpac
 
 init
 [{"tag":"mvhd"}, {"tag":"mvex","boxes": [{"tag":"mehd"},{"tag":"trex"}]}, {"tag":"trak","boxes": [{"tag":"tkhd"},{"tag":"edts","boxes": [{"tag":"elst"}]},{"tag":"mdia","boxes": [{"tag":"mdhd"},{"tag":"hdlr"},{"tag":"minf","boxes": [{"tag":"vmhd"},{"tag":"dinf","boxes": [{"tag":"dref","boxes": [{"tag":"url "}]}]},{"tag":"stbl","boxes": [{"tag":"stsd","boxes": [{"tag":"avc3"}]},{"tag":"stts"},{"tag":"stss"},{"tag":"stsc"},{"tag":"stsz"},{"tag":"stco"}]}]}]}]}]
+
+
+https://gpac.wp.imt.fr/2012/02/01/dash-support/
+
+http://aameer.github.io/articles/digital-rights-management-multi-drm/
