@@ -38,6 +38,7 @@ init
 [{"tag":"mvhd"}, {"tag":"mvex","boxes": [{"tag":"mehd"},{"tag":"trex"}]}, {"tag":"trak","boxes": [{"tag":"tkhd"},{"tag":"edts","boxes": [{"tag":"elst"}]},{"tag":"mdia","boxes": [{"tag":"mdhd"},{"tag":"hdlr"},{"tag":"minf","boxes": [{"tag":"vmhd"},{"tag":"dinf","boxes": [{"tag":"dref","boxes": [{"tag":"url "}]}]},{"tag":"stbl","boxes": [{"tag":"stsd","boxes": [{"tag":"avc3"}]},{"tag":"stts"},{"tag":"stss"},{"tag":"stsc"},{"tag":"stsz"},{"tag":"stco"}]}]}]}]}]
 
 
+MP4Box -dash 4000 -frag 4000 -rap -out 'result.mpd' -segment-name '$RepresentationID$-$Number$' -bs-switching no sample_426_180.mp4 sample_640_272.mp4 sample_854_362.mp4 sample_1280_544.mp4 sample_1920_816.mp4 
 https://gpac.wp.imt.fr/2012/02/01/dash-support/
 
 http://aameer.github.io/articles/digital-rights-management-multi-drm/
