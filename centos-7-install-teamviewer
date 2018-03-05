@@ -1,0 +1,9 @@
+yum -y install glibc alsa-lib freetype libICE libSM libX11 libXau libXdamage libXext libXfixes libXi libXrandr libXrender libXtst libgcc libuuid libxcb zlib
+
+sudo yum install -y epel-release
+sudo yum install -y qt5-qtwebkit-devel
+
+yum -y install teamviewer.i686.rpm
+
+https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-install-teamviewer-on-centos-7-rhel-7.html
+https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit
