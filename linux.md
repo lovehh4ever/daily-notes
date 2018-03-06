@@ -138,3 +138,16 @@ https://sourceforge.net/p/gpac/discussion/287547/thread/5bd36a87/
 
 
 https://sourceforge.net/p/gpac/discussion/287547/thread/3edeb03a/
+
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://114.212.85.243:8080/DashProxy/proxy?url=http%3A%2F%2F114.212.84.179%3A8080%2Fvideo%2Fresult.mpd. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).
+
+/opt/tomcat/conf/web.xml
+
+<filter>
+  <filter-name>CorsFilter</filter-name>
+  <filter-class>org.apache.catalina.filters.CorsFilter</filter-class>
+</filter>
+<filter-mapping>
+  <filter-name>CorsFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
