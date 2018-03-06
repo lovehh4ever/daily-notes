@@ -151,3 +151,10 @@ Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remot
   <filter-name>CorsFilter</filter-name>
   <url-pattern>/*</url-pattern>
 </filter-mapping>
+
+
+EVERE: Servlet.service() for servlet [chow.dan.controller.HomeController] in context with path [/DashProxy] threw exception [Servlet execution threw an exception] with root cause
+java.lang.ClassNotFoundException: chow.dan.common.Content
+
+https://stackoverflow.com/questions/1693322/eclipse-web-project-dependencies
+
