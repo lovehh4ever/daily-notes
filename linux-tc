@@ -1,0 +1,69 @@
+[root@k8s-master ~]# tc qdisc show dev eno1
+qdisc pfifo_fast 0: root refcnt 2 bands 3 priomap  1 2 2 2 1 2 0 0 1 1 1 1 1 1 1 1
+[root@k8s-master ~]# tc qdisc add dev eno1 root handle 1: htb
+[root@k8s-master ~]# tc qdisc show dev eno1
+qdisc htb 1: root refcnt 2 r2q 10 default 0 direct_packets_stat 634
+[root@k8s-master ~]# 
+
+[root@k8s-master ~]# tc class add dev eno1 parent 1: classid 1:233 htb rate 2mbit
+[root@k8s-master ~]# tc class show dev eno1
+class htb 1:233 root prio 0 rate 2000Kbit ceil 2000Kbit burst 1600b cburst 1600b 
+[root@k8s-master ~]# 
+
+
+[root@k8s-master ~]# iperf3 -c 114.212.86.239
+Connecting to host 114.212.86.239, port 5201
+[  4] local 114.212.85.243 port 33852 connected to 114.212.86.239 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec  4.63 MBytes  38.8 Mbits/sec   19   1.23 KBytes       
+[  4]   1.00-2.00   sec  4.89 MBytes  41.0 Mbits/sec   22   1.23 KBytes       
+[  4]   2.00-3.00   sec  1.29 MBytes  10.8 Mbits/sec    8   88.6 KBytes       
+[  4]   3.00-4.00   sec  5.52 MBytes  46.2 Mbits/sec   12   1.23 KBytes       
+[  4]   4.00-5.00   sec   879 KBytes  7.20 Mbits/sec    2    122 KBytes       
+[  4]   5.00-6.00   sec  5.88 MBytes  49.3 Mbits/sec   10   1.23 KBytes       
+[  4]   6.00-7.00   sec   502 KBytes  4.11 Mbits/sec    3    156 KBytes       
+[  4]   7.00-8.00   sec  5.88 MBytes  49.3 Mbits/sec    5   1.23 KBytes       
+[  4]   8.00-9.00   sec   565 KBytes  4.63 Mbits/sec    2    173 KBytes       
+[  4]   9.00-10.00  sec  6.43 MBytes  54.0 Mbits/sec    5   1.23 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-10.00  sec  36.4 MBytes  30.6 Mbits/sec   88             sender
+[  4]   0.00-10.00  sec  36.0 MBytes  30.2 Mbits/sec                  receiver
+
+iperf Done.
+[root@k8s-master ~]# 
+
+[root@k8s-master ~]# tc filter add dev eno1 protocol ip parent 1: prio 1 u32 match ip dst 114.212.86.239 flowid 1:233
+[root@k8s-master ~]# tc filter dev eno1 show
+Command "dev" is unknown, try "tc filter help".
+[root@k8s-master ~]# tc show filter dev eno1
+Object "show" is unknown, try "tc help".
+[root@k8s-master ~]# tc filter show dev eno1
+filter parent 1: protocol ip pref 1 u32 
+filter parent 1: protocol ip pref 1 u32 fh 800: ht divisor 1 
+filter parent 1: protocol ip pref 1 u32 fh 800::800 order 2048 key ht 800 bkt 0 flowid 1:233 
+  match 72d456ef/ffffffff at 16
+[root@k8s-master ~]# iperf3 -c 114.212.86.239
+Connecting to host 114.212.86.239, port 5201
+[  4] local 114.212.85.243 port 34070 connected to 114.212.86.239 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec   272 KBytes  2.23 Mbits/sec    0   34.5 KBytes       
+[  4]   1.00-2.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   2.00-3.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   3.00-4.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   4.00-5.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   5.00-6.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   6.00-7.00   sec   126 KBytes  1.03 Mbits/sec    0   34.5 KBytes       
+[  4]   7.00-8.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   8.00-9.00   sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+[  4]   9.00-10.00  sec   188 KBytes  1.54 Mbits/sec    0   34.5 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-10.00  sec  1.86 MBytes  1.56 Mbits/sec    0             sender
+[  4]   0.00-10.00  sec  1.76 MBytes  1.47 Mbits/sec                  receiver
+
+iperf Done.
+[root@k8s-master ~]# 
+
+
+https://www.linux.com/blog/tc-show-manipulate-traffic-control-settings
