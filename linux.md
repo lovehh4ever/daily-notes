@@ -139,6 +139,7 @@ https://sourceforge.net/p/gpac/discussion/287547/thread/5bd36a87/
 
 https://sourceforge.net/p/gpac/discussion/287547/thread/3edeb03a/
 
+
 Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://114.212.85.243:8080/DashProxy/proxy?url=http%3A%2F%2F114.212.84.179%3A8080%2Fvideo%2Fresult.mpd. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing).
 
 /opt/tomcat/conf/web.xml
@@ -158,3 +159,26 @@ java.lang.ClassNotFoundException: chow.dan.common.Content
 
 https://stackoverflow.com/questions/1693322/eclipse-web-project-dependencies
 
+
+https://www.linuxbabe.com/ubuntu/install-teamviewer-12-ubuntu-16-04-ubuntu-16-10
+
+sudo apt-get -f install
+
+sudo apt install gdebi-core
+
+sudo gdebi teamviewer*.deb
+
+
+
+cat result_init.mp4 > wtf.mp4
+cat 1-10.m4s >> wtf.mp4
+
+
+https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
+
+
+CORS
+
+http://tomcat.apache.org/tomcat-8.5-doc/config/filter.html
+
+https://support.microsoft.com/en-ph/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection
