@@ -42,3 +42,5 @@ MP4Box -dash 4000 -frag 4000 -rap -out 'result.mpd' -segment-name '$Representati
 https://gpac.wp.imt.fr/2012/02/01/dash-support/
 
 http://aameer.github.io/articles/digital-rights-management-multi-drm/
+
+https://github.com/tensorflow/models/tree/master/research/slim
