@@ -11,3 +11,5 @@ https://gcc.gnu.org/onlinedocs/gcc-4.5.1/gcc/Warning-Options.html#index-W-236
 
 fpic
 https://stackoverflow.com/questions/6093547/what-do-r-x86-64-32s-and-r-x86-64-64-relocation-mean
+
+http://tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html
