@@ -25,12 +25,6 @@ source /etc/environment
 echo $JAVA_HOME
 ```
 
-
-### MPEG-DASH Content Generation with MP4Box and x264
-
-
-
-
 http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/
 
 sudo useradd -r tomcat --shell /bin/false
