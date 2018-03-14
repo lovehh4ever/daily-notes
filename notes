@@ -9,33 +9,9 @@ https://commons.apache.org/proper/commons-jcs/ElementEventHandling.html
 Alternatively, you can extend the org.apache.commons.jcs.engine.memory.AbstractMemoryCache class. Several different memory caches are available: two LRU implementations, an LFU, and an adaptive replacement algorithm.
  
 https://commons.apache.org/proper/commons-jcs/RegionProperties.html
- 
-http://www.chrome-allow-file-access-from-file.com/windows.html
-
-http://www.chrome-allow-file-access-from-file.com/
-
-https://github.com/Dash-Industry-Forum/Conformance-and-reference-source/blob/master/conformance/MPDValidator/schemas/DASH-MPD.xsd
-
-http://blog.csdn.net/wanpiyufeng/article/details/32708571
-
-https://www.freeformatter.com/xsd-generator.html
 
 http://www.ehcache.org/documentation/2.7/apis/cache-eviction-algorithms.html
-
-https://github.com/sannies/mp4parser/blob/95badfe47616717556e0269f9d03efc8ab6ba371/examples/src/main/java/com/googlecode/mp4parser/MostSimpleDashExample.java
 
 https://archive.codeplex.com/?p=mp4explorer
 
 https://www.mankier.com/package/gpac
-
-init
-[{"tag":"mvhd"}, {"tag":"mvex","boxes": [{"tag":"mehd"},{"tag":"trex"}]}, {"tag":"trak","boxes": [{"tag":"tkhd"},{"tag":"edts","boxes": [{"tag":"elst"}]},{"tag":"mdia","boxes": [{"tag":"mdhd"},{"tag":"hdlr"},{"tag":"minf","boxes": [{"tag":"vmhd"},{"tag":"dinf","boxes": [{"tag":"dref","boxes": [{"tag":"url "}]}]},{"tag":"stbl","boxes": [{"tag":"stsd","boxes": [{"tag":"avc3"}]},{"tag":"stts"},{"tag":"stss"},{"tag":"stsc"},{"tag":"stsz"},{"tag":"stco"}]}]}]}]}]
-
-MP4Box -dash 4000 -frag 4000 -rap -out 'result.mpd' -segment-name '$RepresentationID$-$Number$' -bs-switching no sample_426_180.mp4 sample_640_272.mp4 sample_854_362.mp4 sample_1280_544.mp4 sample_1920_816.mp4 
-https://gpac.wp.imt.fr/2012/02/01/dash-support/
-
-http://aameer.github.io/articles/digital-rights-management-multi-drm/
-
-https://github.com/tensorflow/models/tree/master/research/slim
-
-https://github.com/brentian/chtholly/blob/13027b4092e7ea8ebf509b67adf9ba5f29ed00b0/notes/programming/tensorflow/tensorflow-serving.md
