@@ -1,0 +1,13 @@
+https://groups.google.com/forum/#!topic/ns-3-users/aw01JC6qBLY
+
+void StaWifiMac::SetNewAssociation (Mac48Address Addr)
+{
+      m_linkDown ();
+      SetState (WAIT_ASSOC_RESP);
+      SetBssid(Addr);
+      SendAssociationRequest ();
+      if (!m_linkUp.IsNull ())
+      {
+            m_linkUp ();
+      }
+}
